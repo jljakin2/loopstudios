@@ -1,0 +1,31 @@
+.about {
+  display: flex;
+
+  margin-bottom: 10rem;
+
+  &__text {
+    padding: 6rem 0 0 6rem;
+    // border: 1px solid red;
+    background: $white;
+
+    align-self: flex-end;
+    margin-left: -10rem;
+    z-index: 10;
+
+    &--heading {
+      font-size: 3rem;
+      font-weight: 200;
+      line-height: 3rem;
+      text-transform: uppercase;
+
+      width: 90%;
+      margin-bottom: 1.5625rem;
+    }
+
+    &--description {
+      color: $very-dark-grey;
+      font-size: 1rem;
+      line-height: 1.5625rem;
+    }
+  }
+}
