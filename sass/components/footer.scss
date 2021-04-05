@@ -6,6 +6,12 @@ footer {
   display: flex;
   padding-top: 2.75rem;
   padding-bottom: 2.0625rem;
+
+  @include respond(mobile) {
+    flex-direction: column;
+    align-items: center;
+    height: 29.375rem;
+  }
 }
 
 .footer-left {
@@ -14,9 +20,26 @@ footer {
   flex-direction: column;
   justify-content: space-between;
 
+  @include respond(mobile) {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  & .logo {
+    @include respond(mobile) {
+      margin-bottom: 2rem;
+    }
+  }
+
   &__nav {
     display: flex;
     list-style: none;
+
+    @include respond(mobile) {
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
 
     &-item {
       position: relative;
@@ -35,6 +58,11 @@ footer {
 
     &-item:not(:last-child) {
       margin-right: 2rem;
+
+      @include respond(mobile) {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
     }
 
     &-item a {
@@ -50,9 +78,17 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
-  //   border: 1px solid red;
+
+  @include respond(mobile) {
+    justify-content: center;
+    align-items: center;
+  }
 
   &__social {
+    @include respond(mobile) {
+      margin-bottom: 1rem;
+    }
+
     & a:not(:last-child) {
       margin-right: 1rem;
     }

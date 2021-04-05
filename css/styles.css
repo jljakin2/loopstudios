@@ -1,6 +1,17 @@
 .padded {
   padding-right: 10.8rem;
   padding-left: 11rem; }
+  @media only screen and (max-width: 75em) {
+    .padded {
+      padding-right: 4rem;
+      padding-left: 4rem; } }
+  @media only screen and (max-width: 50em) {
+    .padded {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem; } }
+
+.show {
+  display: block; }
 
 *,
 *::before,
@@ -11,7 +22,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 93.75%; }
+  font-size: 100%; }
 
 body {
   font-family: "Alata", sans-serif; }
@@ -31,6 +42,16 @@ header {
   z-index: 1;
   padding-top: 4rem;
   margin-bottom: 10rem; }
+  @media only screen and (max-width: 50em) {
+    header {
+      margin-bottom: 6rem; } }
+  @media only screen and (max-width: 43.75em) {
+    header {
+      background-image: url(../../images/mobile/image-hero.jpg);
+      background-position: top;
+      background-size: 100%;
+      height: 85vh;
+      padding-top: 2.5rem; } }
   header::before {
     content: "";
     position: absolute;
@@ -58,6 +79,9 @@ nav {
   .nav-item {
     list-style: none;
     position: relative; }
+    @media only screen and (max-width: 50em) {
+      .nav-item {
+        display: none; } }
     .nav-item:hover::after {
       content: "";
       height: 2px;
@@ -67,12 +91,22 @@ nav {
       bottom: -0.5rem;
       left: 50%;
       transform: translateX(-50%); }
-    .nav-item:not(:last-child) {
+    .nav-item:not(:nth-child(5)) {
       margin-right: 2rem; }
   .nav-item a {
     text-decoration: none;
     color: white;
     cursor: pointer; }
+
+.hamburger {
+  display: none;
+  cursor: pointer; }
+  @media only screen and (max-width: 50em) {
+    .hamburger {
+      display: block; } }
+
+.close {
+  display: none; }
 
 .hero {
   width: 100%;
@@ -90,16 +124,40 @@ nav {
     letter-spacing: 0.2rem;
     padding: 2.5rem;
     width: 40.625rem; }
+    @media only screen and (max-width: 43.75em) {
+      .hero__title {
+        font-size: 2.5rem; } }
 
 .about {
   display: flex;
   margin-bottom: 10rem; }
+  @media only screen and (max-width: 50em) {
+    .about {
+      margin-bottom: 6rem; } }
+  @media only screen and (max-width: 68.75em) {
+    .about {
+      flex-direction: column; } }
+  @media only screen and (max-width: 68.75em) {
+    .about__image {
+      margin-bottom: 3rem; } }
   .about__text {
     padding: 6rem 0 0 6rem;
     background: white;
     align-self: flex-end;
     margin-left: -10rem;
     z-index: 10; }
+    @media only screen and (max-width: 68.75em) {
+      .about__text {
+        margin-left: 0;
+        padding: 0;
+        align-self: stretch;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center; } }
+    @media only screen and (max-width: 50em) {
+      .about__text {
+        z-index: 0; } }
     .about__text--heading {
       font-size: 3rem;
       font-weight: 200;
@@ -116,15 +174,26 @@ nav {
   display: flex;
   flex-direction: column;
   margin-bottom: 11.5rem; }
+  @media only screen and (max-width: 50em) {
+    .portfolio {
+      margin-bottom: 6rem; } }
   .portfolio__top {
     display: flex;
     margin-bottom: 5rem; }
+    @media only screen and (max-width: 50em) {
+      .portfolio__top {
+        justify-content: center;
+        margin-bottom: 3rem; } }
     .portfolio__top--heading {
       font-size: 3rem;
       font-weight: 200;
       line-height: 3rem;
       text-transform: uppercase;
       margin-right: auto; }
+      @media only screen and (max-width: 50em) {
+        .portfolio__top--heading {
+          margin-right: 0;
+          font-size: 2rem; } }
     .portfolio__top--btn {
       border: 1px solid black;
       background: white;
@@ -139,15 +208,43 @@ nav {
       .portfolio__top--btn:focus {
         outline: 3px dashed black;
         outline-offset: 5px; }
+      @media only screen and (max-width: 50em) {
+        .portfolio__top--btn {
+          display: none; } }
+  .portfolio__bottom-btn {
+    display: none; }
+    @media only screen and (max-width: 50em) {
+      .portfolio__bottom-btn {
+        border: 1px solid black;
+        background: white;
+        text-transform: uppercase;
+        letter-spacing: 0.3125rem;
+        font-size: 1rem;
+        cursor: pointer;
+        display: block;
+        margin-top: 6rem;
+        align-self: center;
+        padding: 0.5rem;
+        width: 70%; } }
   .portfolio__grid {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-gap: 2rem; }
+    grid-row-gap: 2rem;
+    grid-column-gap: 2rem; }
+    @media only screen and (max-width: 50em) {
+      .portfolio__grid {
+        height: 70.5rem;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(8, 7.5rem);
+        grid-column-gap: 0; } }
     .portfolio__grid--item {
       width: 100%;
       position: relative;
       cursor: pointer; }
+      @media only screen and (max-width: 50em) {
+        .portfolio__grid--item {
+          overflow: hidden; } }
       .portfolio__grid--item:hover::after {
         content: "";
         position: absolute;
@@ -167,6 +264,9 @@ nav {
   position: relative;
   width: 100%;
   object-fit: cover; }
+  @media only screen and (max-width: 50em) {
+    .grid__image {
+      object-position: center; } }
 
 .grid__text {
   font-size: 2rem;
@@ -177,6 +277,13 @@ nav {
   position: absolute;
   bottom: 2rem;
   left: 2.5rem; }
+  @media only screen and (max-width: 75em) {
+    .grid__text {
+      font-size: 1.5rem; } }
+  @media only screen and (max-width: 68.75em) {
+    .grid__text {
+      bottom: 1.25rem;
+      left: 1.25rem; } }
 
 footer {
   background: black;
@@ -185,15 +292,32 @@ footer {
   display: flex;
   padding-top: 2.75rem;
   padding-bottom: 2.0625rem; }
+  @media only screen and (max-width: 50em) {
+    footer {
+      flex-direction: column;
+      align-items: center;
+      height: 29.375rem; } }
 
 .footer-left {
   margin-right: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+  @media only screen and (max-width: 50em) {
+    .footer-left {
+      text-align: center;
+      margin-right: 0; } }
+  @media only screen and (max-width: 50em) {
+    .footer-left .logo {
+      margin-bottom: 2rem; } }
   .footer-left__nav {
     display: flex;
     list-style: none; }
+    @media only screen and (max-width: 50em) {
+      .footer-left__nav {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 3rem; } }
     .footer-left__nav-item {
       position: relative; }
       .footer-left__nav-item:hover::after {
@@ -207,6 +331,10 @@ footer {
         transform: translateX(-50%); }
     .footer-left__nav-item:not(:last-child) {
       margin-right: 2rem; }
+      @media only screen and (max-width: 50em) {
+        .footer-left__nav-item:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 1rem; } }
     .footer-left__nav-item a {
       color: white;
       text-decoration: none;
@@ -217,6 +345,13 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end; }
+  @media only screen and (max-width: 50em) {
+    .footer-right {
+      justify-content: center;
+      align-items: center; } }
+  @media only screen and (max-width: 50em) {
+    .footer-right__social {
+      margin-bottom: 1rem; } }
   .footer-right__social a:not(:last-child) {
     margin-right: 1rem; }
   .footer-right__social--item {
@@ -235,3 +370,34 @@ footer {
   .footer-right__copyright {
     color: #8c8c8c;
     text-align: right; }
+
+.mobile-menu {
+  height: 100vh;
+  width: 100%;
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  padding: 2.5rem 1.5rem;
+  display: none; }
+  .mobile-menu__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10rem; }
+  .mobile-menu__nav {
+    display: flex;
+    flex-direction: column; }
+    .mobile-menu__nav-item a {
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 1.5rem; }
+    .mobile-menu__nav-item:not(:last-child) {
+      margin-bottom: 1.5rem; }
+
+.close {
+  display: block;
+  cursor: pointer; }

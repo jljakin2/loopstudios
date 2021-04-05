@@ -1,6 +1,6 @@
-# Frontend Mentor - Maker pre-launch landing page solution
+# Frontend Mentor - Loopstudios landing page solution
 
-This is a solution to the [Maker pre-launch landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/maker-prelaunch-landing-page-WVZIJtKLd). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Loopstudios landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -18,11 +18,8 @@ This is a solution to the [Maker pre-launch landing page challenge on Frontend M
 
 Users should be able to:
 
-- View the optimal layout depending on their device's screen size
-- See hover states for interactive elements
-- Receive an error message when the form is submitted if:
-  - The `Email address` field is empty should show "Oops! Please add your email"
-  - The email is not formatted correctly should show "Oops! That doesn’t look like an email address"
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
 
 ### Screenshot
 
@@ -39,7 +36,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - Sass
   - Custom mixins for media queries
-- Flexbox
+- Flexbox and Grid for the layout
 - Vanilla JS
 - Desktop-first workflow
 

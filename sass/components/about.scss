@@ -3,14 +3,42 @@
 
   margin-bottom: 10rem;
 
+  @include respond(mobile) {
+    margin-bottom: 6rem;
+  }
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+
+  &__image {
+    @include respond(tab-port) {
+      margin-bottom: 3rem;
+    }
+  }
+
   &__text {
     padding: 6rem 0 0 6rem;
-    // border: 1px solid red;
     background: $white;
 
     align-self: flex-end;
     margin-left: -10rem;
     z-index: 10;
+
+    @include respond(tab-port) {
+      margin-left: 0;
+      padding: 0;
+      align-self: stretch;
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include respond(mobile) {
+      z-index: 0;
+    }
 
     &--heading {
       font-size: 3rem;

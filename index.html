@@ -1,120 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/styles.css">
+    <title>Frontend Mentor | Loopstudios landing page</title>
+  </head>
 
-  <title>Frontend Mentor | Loopstudios landing page</title>
-</head>
-
-<body>
-  <header>
-    <nav class="padded">
-      <img src="./images/logo.svg" alt="loopstudios logo" class="logo">
-      <ul class="nav">
-        <li class="nav-item"><a href="#">About</a></li>
-        <li class="nav-item"><a href="#">Careers</a></li>
-        <li class="nav-item"><a href="#">Events</a></li>
-        <li class="nav-item"><a href="#">Products</a></li>
-        <li class="nav-item"><a href="#">Support</a></li>
-      </ul>
-    </nav>
-    <div class="hero padded">
-      <h1 class="hero__title">
-        Immersive experiences that deliver
-      </h1>
-    </div>
-  </header>
-  <main>
-    <section class="about padded">
-      <img src="./images/desktop/image-interactive.jpg" alt="person using vr machine" class="about__image">
-      <div class="about__text">
-        <h2 class="about__text--heading">The leader in interactive VR</h2>
-        <p class="about__text--description">Founded in 2011, Loopstudios has been producing world-class virtual reality
-          projects for some of the best companies around the globe. Our award-winning
-          creations have transformed businesses through digital experiences that bind
-          to their brand.</p>
+  <body>
+    <header>
+      <nav class="padded">
+        <img src="./images/logo.svg" alt="loopstudios logo" class="logo" />
+        <ul class="nav">
+          <li class="nav-item"><a href="#">About</a></li>
+          <li class="nav-item"><a href="#">Careers</a></li>
+          <li class="nav-item"><a href="#">Events</a></li>
+          <li class="nav-item"><a href="#">Products</a></li>
+          <li class="nav-item"><a href="#">Support</a></li>
+          <li class="hamburger">
+            <img src="./images/icon-hamburger.svg" alt="hamburger" />
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-menu">
+        <div class="mobile-menu__top">
+          <img src="./images/logo.svg" alt="loopstudios logo" class="logo" />
+          <img src="./images/icon-close.svg" alt="close" class="close" />
+        </div>
+        <ul class="mobile-menu__nav">
+          <li class="mobile-menu__nav-item"><a href="#">About</a></li>
+          <li class="mobile-menu__nav-item"><a href="#">Careers</a></li>
+          <li class="mobile-menu__nav-item"><a href="#">Events</a></li>
+          <li class="mobile-menu__nav-item"><a href="#">Products</a></li>
+          <li class="mobile-menu__nav-item"><a href="#">Support</a></li>
+        </ul>
       </div>
-    </section>
-    <section class="portfolio padded">
-      <div class="portfolio__top">
-        <h2 class="portfolio__top--heading">Our creations</h2>
-        <button class="portfolio__top--btn">See all</button>
+      <div class="hero padded">
+        <h1 class="hero__title">Immersive experiences that deliver</h1>
       </div>
-      <div class="portfolio__grid">
-        <div class="portfolio__grid--item">
-          <a href="#"><img src="./images/desktop/image-deep-earth.jpg" alt="deep earth" class="grid__image"></a>
-          <h3 class="grid__text">Deep<br>earth</h3>
+    </header>
+    <main>
+      <section class="about padded">
+        <img
+          src="./images/desktop/image-interactive.jpg"
+          alt="person using vr machine"
+          class="about__image"
+        />
+        <div class="about__text">
+          <h2 class="about__text--heading">The leader in interactive VR</h2>
+          <p class="about__text--description">
+            Founded in 2011, Loopstudios has been producing world-class virtual
+            reality projects for some of the best companies around the globe.
+            Our award-winning creations have transformed businesses through
+            digital experiences that bind to their brand.
+          </p>
         </div>
-        <div class="portfolio__grid--item">
-          <a href="#"><img src="./images/desktop/image-night-arcade.jpg" alt="night arcade" class="grid__image"></a>
-          <h3 class="grid__text">Night<br>arcade</h3>
+      </section>
+      <section class="portfolio padded">
+        <div class="portfolio__top">
+          <h2 class="portfolio__top--heading">Our creations</h2>
+          <button class="portfolio__top--btn">See all</button>
         </div>
-        <div class="portfolio__grid--item">
-          <a href="#"><img src="./images/desktop/image-soccer-team.jpg" alt="soccer team" class="grid__image"></a>
-          <h3 class="grid__text">Soccer<br>team VR</h3>
+        <div class="portfolio__grid">
+          <div class="portfolio__grid--item">
+            <a href="#">
+              <picture>
+                <source
+                  srcset="./images/mobile/image-deep-earth.jpg"
+                  media="(max-width: 50em)"
+                />
+                <img
+                  src="./images/desktop/image-deep-earth.jpg"
+                  alt="deep earth"
+                  class="grid__image"
+                />
+              </picture>
+            </a>
+            <h3 class="grid__text">Deep<br />earth</h3>
+          </div>
+          <div class="portfolio__grid--item">
+            <a href="#">
+              <picture>
+                <source
+                  srcset="./images/mobile/image-night-arcade.jpg"
+                  media="(max-width: 50em)"
+                />
+                <img
+                  src="./images/desktop/image-night-arcade.jpg"
+                  alt="night arcade"
+                  class="grid__image"
+                />
+              </picture>
+            </a>
+            <h3 class="grid__text">Night<br />arcade</h3>
+          </div>
+          <div class="portfolio__grid--item">
+            <a href="#">
+              <picture>
+                <source
+                  srcset="./images/mobile/image-soccer-team.jpg"
+                  media="(max-width: 50em)"
+                />
+                <img
+                  src="./images/desktop/image-soccer-team.jpg"
+                  alt="soccer team"
+                  class="grid__image"
+                />
+              </picture>
+            </a>
+            <h3 class="grid__text">Soccer<br />team VR</h3>
+          </div>
+          <div class="portfolio__grid--item">
+            <a href="#">
+              <picture>
+                <source
+                  srcset="./images/mobile/image-grid.jpg"
+                  media="(max-width: 50em)"
+                />
+                <img
+                  src="./images/desktop/image-grid.jpg"
+                  alt="the grid"
+                  class="grid__image"
+                />
+              </picture>
+            </a>
+            <h3 class="grid__text">The<br />grid</h3>
+          </div>
+          <div class="portfolio__grid--item">
+            <a href="#">
+              <picture>
+                <source
+                  srcset="./images/mobile/image-from-above.jpg"
+                  media="(max-width: 50em)"
+                />
+                <img
+                  src="./images/desktop/image-from-above.jpg"
+                  alt="from above vr"
+                  class="grid__image"
+                />
+              </picture>
+            </a>
+            <h3 class="grid__text">From up<br />above VR</h3>
+          </div>
+          <div class="portfolio__grid--item">
+            <a href="#">
+              <picture>
+                <source
+                  srcset="./images/mobile/image-pocket-borealis.jpg"
+                  media="(max-width: 50em)"
+                />
+                <img
+                  src="./images/desktop/image-pocket-borealis.jpg"
+                  alt="pocket borealis"
+                  class="grid__image"
+                />
+              </picture>
+            </a>
+            <h3 class="grid__text">Pocket<br />borealis</h3>
+          </div>
+          <div class="portfolio__grid--item">
+            <a href="#">
+              <picture>
+                <source
+                  srcset="./images/mobile/image-curiosity.jpg"
+                  media="(max-width: 50em)"
+                />
+                <img
+                  src="./images/desktop/image-curiosity.jpg"
+                  alt="curiosity"
+                  class="grid__image"
+                />
+              </picture>
+            </a>
+            <h3 class="grid__text">The<br />curiosity</h3>
+          </div>
+          <div class="portfolio__grid--item">
+            <a href="#">
+              <picture>
+                <source
+                  srcset="./images/mobile/image-fisheye.jpg"
+                  media="(max-width: 50em)"
+                />
+                <img
+                  src="./images/desktop/image-fisheye.jpg"
+                  alt="fisheye"
+                  class="grid__image"
+                />
+              </picture>
+            </a>
+            <h3 class="grid__text">Make it<br />fisheye</h3>
+          </div>
         </div>
-        <div class="portfolio__grid--item">
-          <a href="#"><img src="./images/desktop/image-grid.jpg" alt="the grid" class="grid__image"></a>
-          <h3 class="grid__text">The<br>grid</h3>
+        <button class="portfolio__bottom-btn">See all</button>
+      </section>
+    </main>
+    <footer class="padded">
+      <div class="footer-left">
+        <img src="./images/logo.svg" alt="loopstudios logo" class="logo" />
+        <ul class="footer-left__nav">
+          <li class="footer-left__nav-item"><a href="#">About</a></li>
+          <li class="footer-left__nav-item"><a href="#">Careers</a></li>
+          <li class="footer-left__nav-item"><a href="#">Events</a></li>
+          <li class="footer-left__nav-item"><a href="#">Products</a></li>
+          <li class="footer-left__nav-item"><a href="#">Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <div class="footer-right__social">
+          <a href="#"
+            ><i
+              class="footer-right__social--item fab fa-facebook-square fa-2x"
+            ></i
+          ></a>
+          <a href="#"
+            ><i
+              class="footer-right__social--item fab fa-twitter-square fa-2x"
+            ></i
+          ></a>
+          <a href="#"
+            ><i
+              class="footer-right__social--item fab fa-pinterest-square fa-2x"
+            ></i
+          ></a>
+          <a href="#"
+            ><i class="footer-right__social--item fab fa-instagram fa-2x"></i
+          ></a>
         </div>
-        <div class="portfolio__grid--item">
-          <a href="#"><img src="./images/desktop/image-from-above.jpg" alt="from above vr" class="grid__image"></a>
-          <h3 class="grid__text">From up<br>above VR</h3>
-        </div>
-        <div class="portfolio__grid--item">
-          <a href="#"><img src="./images/desktop/image-pocket-borealis.jpg" alt="pocket borealis"
-              class="grid__image"></a>
-          <h3 class="grid__text">Pocket<br>borealis</h3>
-        </div>
-        <div class="portfolio__grid--item">
-          <a href="#"><img src="./images/desktop/image-curiosity.jpg" alt="curiosity" class="grid__image"></a>
-          <h3 class="grid__text">The<br>curiosity</h3>
-        </div>
-        <div class="portfolio__grid--item">
-          <a href="#"><img src="./images/desktop/image-fisheye.jpg" alt="fisheye" class="grid__image"></a>
-          <h3 class="grid__text">Make it<br>fisheye</h3>
+        <div class="footer-right__copyright">
+          © 2021 Loopstudios. All rights reserved.
         </div>
       </div>
-    </section>
-  </main>
-  <footer class="padded">
-    <div class="footer-left">
-      <img src="./images/logo.svg" alt="loopstudios logo" class="logo">
-      <ul class="footer-left__nav">
-        <li class="footer-left__nav-item"><a href="#">About</a></li>
-        <li class="footer-left__nav-item"><a href="#">Careers</a></li>
-        <li class="footer-left__nav-item"><a href="#">Events</a></li>
-        <li class="footer-left__nav-item"><a href="#">Products</a></li>
-        <li class="footer-left__nav-item"><a href="#">Support</a></li>
-      </ul>
-    </div>
-    <div class="footer-right">
-      <div class="footer-right__social">
-        <a href="#"><i class="footer-right__social--item fab fa-facebook-square fa-2x"></i></a>
-        <a href="#"><i class="footer-right__social--item fab fa-twitter-square fa-2x"></i></a>
-        <a href="#"><i class="footer-right__social--item fab fa-pinterest-square fa-2x"></i></a>
-        <a href="#"><i class="footer-right__social--item fab fa-instagram fa-2x"></i></a>
-      </div>
-      <div class="footer-right__copyright">
-        © 2021 Loopstudios. All rights reserved.
-      </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+    <script src="./index.js"></script>
+  </body>
 </html>

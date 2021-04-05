@@ -1,4 +1,18 @@
 .padded {
   padding-right: 10.8rem;
   padding-left: 11rem;
+
+  @include respond(tab-land) {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+  @include respond(mobile) {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+.show {
+  display: block;
 }

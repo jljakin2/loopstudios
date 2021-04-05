@@ -4,10 +4,19 @@
 
   margin-bottom: 11.5rem;
 
+  @include respond(mobile) {
+    margin-bottom: 6rem;
+  }
+
   &__top {
     display: flex;
 
     margin-bottom: 5rem;
+
+    @include respond(mobile) {
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
 
     &--heading {
       font-size: 3rem;
@@ -16,6 +25,11 @@
       text-transform: uppercase;
 
       margin-right: auto;
+
+      @include respond(mobile) {
+        margin-right: 0;
+        font-size: 2rem;
+      }
     }
 
     &--btn {
@@ -37,6 +51,29 @@
         outline: 3px dashed $black;
         outline-offset: 5px;
       }
+
+      @include respond(mobile) {
+        display: none;
+      }
+    }
+  }
+
+  &__bottom-btn {
+    display: none;
+
+    @include respond(mobile) {
+      border: 1px solid $black;
+      background: $white;
+      text-transform: uppercase;
+      letter-spacing: 0.3125rem;
+      font-size: 1rem;
+      cursor: pointer;
+      display: block;
+
+      margin-top: 6rem;
+      align-self: center;
+      padding: 0.5rem;
+      width: 70%;
     }
   }
 
@@ -44,12 +81,24 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-gap: 2rem;
+    grid-row-gap: 2rem;
+    grid-column-gap: 2rem;
+
+    @include respond(mobile) {
+      height: 70.5rem;
+      grid-template-columns: auto;
+      grid-template-rows: repeat(8, 7.5rem);
+      grid-column-gap: 0;
+    }
 
     &--item {
       width: 100%;
       position: relative;
       cursor: pointer;
+
+      @include respond(mobile) {
+        overflow: hidden;
+      }
 
       &:hover::after {
         content: "";
@@ -76,6 +125,10 @@
   position: relative;
   width: 100%;
   object-fit: cover;
+
+  @include respond(mobile) {
+    object-position: center;
+  }
 }
 
 .grid__text {
@@ -88,4 +141,13 @@
   position: absolute;
   bottom: 2rem;
   left: 2.5rem;
+
+  @include respond(tab-land) {
+    font-size: 1.5rem;
+  }
+
+  @include respond(tab-port) {
+    bottom: 1.25rem;
+    left: 1.25rem;
+  }
 }
